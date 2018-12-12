@@ -1,0 +1,46 @@
+<div class="main-panel"><br><br>
+ <div  *ngFor="let item of tiendas | async"> 
+  <div *ngIf="item.comerciante_id == currentUser.id">  
+       <div class="content">
+         <div class="container-fluid">
+           <div class="row">
+            <div class="col-lg-4 col-md-5">
+                <div class="card card-user">
+                    <div class="image">
+                        <img src="https://github.com/krobawsky/GamarraApp/blob/master/app/src/main/res/drawable-xxhdpi/clothing2.png?raw=true" alt="..."/>
+                    </div>
+                    <div class="content">
+                        <div class="author">
+                          <img class="avatar border-white" src="https://github.com/krobawsky/GamarraApp/blob/master/app/src/main/res/drawable-xxxhdpi/img_store2.png?raw=true" alt="..."/>
+                          <h4 class="title">{{ item.nombre }}<br />
+                             <a ><small>{{item.telefono}}</small></a>
+                          </h4>
+                        </div>
+                        <p class="description text-center">
+                            {{item.ubicacion}}
+                        </p>
+                        <p class="description text-center">
+                            Puesto #{{item.puesto}}
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="text-center"><br>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-3">
+                                      <a  class="btn btn-info btn-raised btn-round ">Editar</a>
+                            </div>
+                         
+                            <div class="col-md-2">
+                                      <a  class="btn btn-danger btn-raised btn-round ">Eliminar</a>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+     </div>
+    </div>
+   </div>
+  </div>
+</div>

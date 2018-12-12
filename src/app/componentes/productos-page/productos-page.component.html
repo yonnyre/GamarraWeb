@@ -1,0 +1,65 @@
+<div class="main-panel">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="productosregister">
+                        <i class="ti-plus"></i>
+                         &nbsp;<p> Añadir Producto</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+ <div class="content">
+ <div class="container-fluid">
+ <div class="row">
+  <div  *ngFor="let item of tiendas | async"> 
+   <div *ngIf="item.comerciante_id == currentUser.id"> 
+   <div *ngFor="let pro of productos | async">
+    <div *ngIf="pro.tienda_id == item.id"> 
+   
+            <div class="col-lg-4 col-md-5 col-sm-4">
+                <div class="card card-user">
+                    <div class="image">
+                        <img src="https://github.com/krobawsky/GamarraApp/blob/master/app/src/main/res/drawable-xxhdpi/clothing2.png?raw=true" alt="..."/>
+                    </div>
+                    <div class="content">
+                        <div class="author">
+                          <img class="avatar border-white" src="https://preview.c9users.io/krobawsky/gamarra_rest/api/public/images/{{pro.imagen}}?_c9_id=livepreview0&_c9_host=https://ide.c9.io" alt="..."/>
+                          <h4 class="title">{{ pro.nombre }}<br />
+                             <a ><small>{{pro.telefono}}</small></a>
+                          </h4>
+                        </div>
+                        <p class="description text-center">
+                        </p>
+                        <p class="description text-center">
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="text-center"><br>
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-3">
+                                      <a  class="btn btn-info btn-raised btn-round ">Editar</a>
+                            </div>
+                         
+                            <div class="col-md-2">
+                                      <a  class="btn btn-danger btn-raised btn-round ">Eliminar</a>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+     </div>
+    </div>                               
+    </div>
+   </div>
+  </div>
+ </div>
+</div>

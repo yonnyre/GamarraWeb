@@ -1,0 +1,42 @@
+<br>
+<div class="container ">
+  <div class="row">
+    <div class="">
+      <div class="card card-login col-lg-4 col-md-offset-4">
+        <form class="form" #loginForm=ngForm (ngSubmit)="onSubmit()" >
+          <div class="card-header card-header-info text-center">
+            <img src="https://lh3.googleusercontent.com/C4pywFrS-W3QSf__QMHeOSZnDOkR8HKBhBCQYrcvdKg5AnKmvjacorejb0uDUbCNYUrH=s180" style="height: 90px;">
+            <div class="social-line">
+            <h4 class="card-title">Iniciar Sesion</h4>
+            </div>
+          </div><br>
+          <div class="card-body ">
+            <div class="input-group ">
+                <span class="input-group-addon">
+                  <i class="ti-email"></i>
+                </span>
+              <input type="email" name="email" class="form-control " placeholder="Email" [(ngModel)]="form.email" required>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="ti-lock"></i>
+                </span>
+              <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="form.password" required>
+            </div>
+          </div><br>
+          <div class="footer text-center">
+            <button type="submit" class="btn btn btn-link btn-wd btn-lg" [disabled]="!loginForm.valid" >Iniciar Sesion</button>
+          </div>
+          <hr>
+          <p class="text-center">¿Aún no tienes cuenta en GamarraApp?</p>
+           <div class="footer text-center">
+          <a href="/register" class="btn btn-info btn-raised btn-round ">
+            Registrate
+          </a>
+          </div>
+          <br>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
